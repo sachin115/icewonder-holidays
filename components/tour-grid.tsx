@@ -114,15 +114,6 @@ export function TourGrid() {
       <div>
         <div className="flex items-center justify-between mb-6">
           <p className="text-muted-foreground">Showing {tours.length} tours</p>
-          <div className="flex items-center gap-2">
-            <span className="text-sm text-muted-foreground">Sort by:</span>
-            <select className="text-sm border border-border rounded-md px-3 py-1.5 bg-background">
-              <option>Popularity</option>
-              <option>Price: Low to High</option>
-              <option>Price: High to Low</option>
-              <option>Rating</option>
-            </select>
-          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
