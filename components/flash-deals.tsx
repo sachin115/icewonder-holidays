@@ -5,8 +5,12 @@ import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Clock, Flame, Users } from "lucide-react"
+import { EnquiryModal } from "@/components/enquiry-modal"
 
 export function FlashDeals() {
+  const [isEnquiryOpen, setIsEnquiryOpen] = useState(false)
+  const [selectedDeal, setSelectedDeal] = useState("")
+
   const [timeLeft, setTimeLeft] = useState({
     hours: 12,
     minutes: 45,
@@ -56,6 +60,11 @@ export function FlashDeals() {
       image: "/bali-temple-culture.jpg",
     },
   ]
+
+  const handleGrabDeal = (dealTitle: string) => {
+    setSelectedDeal(dealTitle)
+    setIsEnquiryOpen(true)
+  }
 
   return (
     <section className="py-16 bg-gradient-to-r from-orange-500/10 via-red-500/10 to-pink-500/10 relative overflow-hidden">
@@ -133,7 +142,10 @@ export function FlashDeals() {
                   <span className="text-2xl font-bold text-orange-500">{deal.salePrice}</span>
                   <span className="text-lg text-muted-foreground line-through">{deal.originalPrice}</span>
                 </div>
-                <Button className="w-full bg-orange-500 hover:bg-orange-600 text-white h-12 text-lg font-semibold group-hover:scale-105 transition-transform">
+                <Button
+                  onClick={() => handleGrabDeal(deal.title)}
+                  className="w-full bg-orange-500 hover:bg-orange-600 text-white h-12 text-lg font-semibold group-hover:scale-105 transition-transform"
+                >
                   Grab This Deal
                 </Button>
               </div>
@@ -141,6 +153,8 @@ export function FlashDeals() {
           ))}
         </div>
       </div>
+
+      <EnquiryModal open={isEnquiryOpen} onOpenChange={setIsEnquiryOpen} defaultDestination={selectedDeal} />
     </section>
   )
 }

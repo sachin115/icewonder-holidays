@@ -4,6 +4,7 @@ import { useState } from "react"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Star, MapPin, Calendar, Users, X } from "lucide-react"
+import { EnquiryModal } from "@/components/enquiry-modal"
 
 const packages = [
   {
@@ -82,6 +83,7 @@ const packages = [
 
 export function HolidayGallery() {
   const [selectedPackage, setSelectedPackage] = useState<(typeof packages)[0] | null>(null)
+  const [isEnquiryOpen, setIsEnquiryOpen] = useState(false)
 
   return (
     <>
@@ -236,6 +238,10 @@ export function HolidayGallery() {
 
               <Button
                 size="lg"
+                onClick={() => {
+                  setIsEnquiryOpen(true)
+                  setSelectedPackage(null)
+                }}
                 className="w-full text-lg py-7 bg-gradient-to-r from-rose-600 to-orange-500 hover:from-rose-700 hover:to-orange-600"
               >
                 Book This Package
@@ -244,6 +250,9 @@ export function HolidayGallery() {
           </Card>
         </div>
       )}
+
+      {/* Enquiry Modal */}
+      <EnquiryModal open={isEnquiryOpen} onOpenChange={setIsEnquiryOpen} />
     </>
   )
 }

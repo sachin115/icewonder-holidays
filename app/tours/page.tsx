@@ -2,7 +2,6 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { PopularSearches } from "@/components/popular-searches"
 import { RecentlyViewed } from "@/components/recently-viewed"
-import { TourFilters } from "@/components/tour-filters"
 import { TourGrid } from "@/components/tour-grid"
 import { RecommendedForYou } from "@/components/recommended-for-you"
 
@@ -34,7 +33,6 @@ export default function ToursPage() {
 
             <RecentlyViewed />
 
-            <TourFilters />
             <TourGrid />
 
             <div className="mt-16">

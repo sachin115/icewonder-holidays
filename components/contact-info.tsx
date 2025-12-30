@@ -5,17 +5,17 @@ const contactDetails = [
   {
     icon: MapPin,
     title: "Office Address",
-    details: ["123 Travel Street", "Mumbai, Maharashtra 400001", "India"],
+    details: ["Plot no 20, Ashirwad Nagar", "Near Trikoni Maidan, Malginagar Square", "Nagpur 440024, Maharashtra"],
   },
   {
     icon: Phone,
     title: "Phone Number",
-    details: ["+91 98765 43210", "+91 98765 43211"],
+    details: ["+91 9137543633", "+91 7397909126"],
   },
   {
     icon: Mail,
     title: "Email Address",
-    details: ["info@aiholidays.com", "support@aiholidays.com"],
+    details: ["sales.icewonderholidays@gmail.com"],
   },
   {
     icon: Clock,
@@ -68,14 +68,14 @@ export function ContactInfo() {
         <CardContent className="p-6">
           <h3 className="font-semibold mb-2 text-lg">Need Immediate Assistance?</h3>
           <p className="text-sm text-muted-foreground mb-4 text-pretty">
-            For urgent travel queries or last-minute bookings, please call our 24/7 helpline.
+            For urgent travel queries or last-minute bookings, please call our helpline.
           </p>
           <a
-            href="tel:+919876543210"
+            href="tel:+919137543633"
             className="inline-flex items-center gap-2 text-primary font-semibold hover:underline"
           >
             <Phone className="h-4 w-4" />
-            Call Now: +91 98765 43210
+            Call Now: +91 9137543633
           </a>
         </CardContent>
       </Card>

@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { useState } from "react"
-import { Menu, X, Plane, Building2, Umbrella, Bus, FileText, MoreHorizontal, HelpCircle, User } from "lucide-react"
+import { Menu, X, Plane, Building2, Umbrella, Bus, FileText, MoreHorizontal } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { EnquiryModal } from "@/components/enquiry-modal"
 import Image from "next/image"
@@ -20,9 +20,6 @@ export function Header() {
   ]
 
   const moreLinks = [
-    { href: "/honeymoon-tours", label: "Honeymoon Tours" },
-    { href: "/corporate", label: "Corporate Travel" },
-    { href: "/jodhpur-tour", label: "Jodhpur Tour" },
     { href: "/about", label: "About Us" },
     { href: "/contact", label: "Contact Us" },
   ]
@@ -85,16 +82,6 @@ export function Header() {
             </nav>
 
             <div className="flex items-center gap-4">
-              <button className="hidden md:flex flex-col items-center gap-1 text-xs font-semibold text-foreground/80 transition-all hover:text-primary hover:scale-110">
-                <HelpCircle className="h-5 w-5" />
-                <span>Help</span>
-              </button>
-
-              <button className="hidden md:flex flex-col items-center gap-1 text-xs font-semibold text-foreground/80 transition-all hover:text-primary hover:scale-110">
-                <User className="h-5 w-5" />
-                <span>Login</span>
-              </button>
-
               <Button
                 onClick={() => setEnquiryOpen(true)}
                 className="hidden sm:flex bg-primary hover:bg-primary/90 text-primary-foreground font-bold"

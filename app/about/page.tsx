@@ -66,18 +66,8 @@ export default function AboutPage() {
               Turning Travel Dreams into Reality Since Day One
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/tours">
-                <Button size="lg" className="bg-white text-primary hover:bg-white/90 font-bold">
-                  <Globe className="mr-2 h-5 w-5" />
-                  Explore Tours
-                </Button>
-              </Link>
               <Link href="/contact">
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-white text-white hover:bg-white/20 font-bold bg-transparent"
-                >
+                <Button size="lg" className="border-white text-white hover:bg-white/20 font-bold bg-white/10">
                   <Phone className="mr-2 h-5 w-5" />
                   Contact Us
                 </Button>

@@ -1,11 +1,16 @@
 "use client"
 
+import { useState } from "react"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Sparkles, Star, MapPin, Calendar, Users } from "lucide-react"
+import { EnquiryModal } from "@/components/enquiry-modal"
 
 export function RecommendedForYou() {
+  const [isEnquiryOpen, setIsEnquiryOpen] = useState(false)
+  const [selectedPackage, setSelectedPackage] = useState("")
+
   const recommendations = [
     {
       id: 1,
@@ -43,6 +48,11 @@ export function RecommendedForYou() {
       tags: ["Culture", "Heritage", "Food"],
     },
   ]
+
+  const handleBookNow = (packageName: string) => {
+    setSelectedPackage(packageName)
+    setIsEnquiryOpen(true)
+  }
 
   return (
     <section className="py-12 bg-gradient-to-br from-primary/5 to-accent/5 rounded-3xl animate-fade-in">
@@ -114,13 +124,20 @@ export function RecommendedForYou() {
                     <p className="text-sm text-muted-foreground">Starting from</p>
                     <p className="text-3xl font-bold text-primary">{rec.price}</p>
                   </div>
-                  <Button className="group-hover:scale-110 transition-transform">Book Now</Button>
+                  <Button
+                    onClick={() => handleBookNow(rec.name)}
+                    className="group-hover:scale-110 transition-transform"
+                  >
+                    Book Now
+                  </Button>
                 </div>
               </div>
             </Card>
           ))}
         </div>
       </div>
+
+      <EnquiryModal open={isEnquiryOpen} onOpenChange={setIsEnquiryOpen} defaultDestination={selectedPackage} />
     </section>
   )
 }
