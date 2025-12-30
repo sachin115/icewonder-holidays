@@ -227,16 +227,6 @@ export default function AboutPage() {
                 +919137543633
               </Button>
             </Link>
-            <Link href="/tours">
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-white text-white hover:bg-white/20 font-bold bg-transparent"
-              >
-                <Globe className="mr-2 h-5 w-5" />
-                Browse Packages
-              </Button>
-            </Link>
           </div>
           <div className="mt-8 flex items-center justify-center gap-6 text-sm opacity-90">
             <a href="tel:+919137543633" className="hover:underline flex items-center gap-2">

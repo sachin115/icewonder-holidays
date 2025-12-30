@@ -105,7 +105,7 @@ export function InteractiveMap() {
                       <h3 className="text-3xl font-bold mb-2">{dest.name}</h3>
                       <p className="text-muted-foreground mb-4">{dest.country}</p>
                       <p className="text-4xl font-bold text-primary mb-4">{dest.price}</p>
-                      <Link href="/tours">
+                      <Link href="/holidays">
                         <Button size="lg" className="w-full md:w-auto">
                           View Packages
                         </Button>

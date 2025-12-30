@@ -90,18 +90,11 @@ export function HeroCarousel() {
               }`}
               style={{ animationDelay: "0.6s" }}
             >
-              <Link href="/tours">
+              <Link href="/holidays">
                 <Button size="lg" className="text-base hover-lift-3d">
                   View Packages
                 </Button>
               </Link>
-              <Button
-                size="lg"
-                variant="outline"
-                className="text-base bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20 hover-lift-3d"
-              >
-                Book Now
-              </Button>
             </div>
           </div>
         </div>

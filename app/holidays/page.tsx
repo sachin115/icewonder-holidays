@@ -3,7 +3,7 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { HolidaySearch } from "@/components/holiday-search"
-import { HolidayGallery } from "@/components/holiday-gallery"
+import { TourGrid } from "@/components/tour-grid"
 import { HolidayThemes } from "@/components/holiday-themes"
 import { TrendingDestinations } from "@/components/trending-destinations"
 import { HolidayTestimonials } from "@/components/holiday-testimonials"
@@ -68,7 +68,18 @@ export default function HolidaysPage() {
       </section>
 
       <main className="py-16">
-        <HolidayGallery />
+        <section className="container mx-auto px-4 mb-20">
+          <div className="text-center mb-12 animate-slide-up">
+            <div className="inline-flex items-center gap-2 bg-rose-100 text-rose-600 px-4 py-2 rounded-full mb-4">
+              <span className="font-bold">⭐ Best Sellers</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Our Holiday Packages</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Handpicked destinations with exclusive deals and unforgettable experiences
+            </p>
+          </div>
+          <TourGrid />
+        </section>
         <HolidayThemes />
         <TrendingDestinations />
         <HolidayTestimonials />
