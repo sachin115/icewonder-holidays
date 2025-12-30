@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 const destinations = [
   {
@@ -89,9 +90,11 @@ export function HeroCarousel() {
               }`}
               style={{ animationDelay: "0.6s" }}
             >
-              <Button size="lg" className="text-base hover-lift-3d">
-                View Packages
-              </Button>
+              <Link href="/tours">
+                <Button size="lg" className="text-base hover-lift-3d">
+                  View Packages
+                </Button>
+              </Link>
               <Button
                 size="lg"
                 variant="outline"

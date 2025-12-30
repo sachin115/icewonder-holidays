@@ -23,6 +23,7 @@ export function Header() {
     { href: "/honeymoon-tours", label: "Honeymoon Tours" },
     { href: "/corporate", label: "Corporate Travel" },
     { href: "/jodhpur-tour", label: "Jodhpur Tour" },
+    { href: "/about", label: "About Us" },
     { href: "/contact", label: "Contact Us" },
   ]
 
