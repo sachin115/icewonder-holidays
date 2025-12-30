@@ -228,27 +228,6 @@ export default function AboutPage() {
               </Button>
             </Link>
           </div>
-          <div className="mt-8 flex items-center justify-center gap-6 text-sm opacity-90">
-            <a href="tel:+919137543633" className="hover:underline flex items-center gap-2">
-              <Phone className="h-4 w-4" />
-              +919137543633
-            </a>
-            <span>|</span>
-            <a href="tel:+917397909126" className="hover:underline flex items-center gap-2">
-              <Phone className="h-4 w-4" />
-              +917397909126
-            </a>
-            <span>|</span>
-            <a
-              href="http://www.icewonderholidays.co.in"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:underline flex items-center gap-2"
-            >
-              <Globe className="h-4 w-4" />
-              www.icewonderholidays.co.in
-            </a>
-          </div>
         </div>
       </section>
     </div>
