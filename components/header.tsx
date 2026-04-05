@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { useState } from "react"
-import { Menu, X, Plane, Building2, Umbrella, Bus, FileText, MoreHorizontal } from "lucide-react"
+import { Menu, X, Plane, Building2, Umbrella, Bus, FileText, MoreHorizontal, Heart } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { EnquiryModal } from "@/components/enquiry-modal"
 import Image from "next/image"
@@ -17,6 +17,7 @@ export function Header() {
     { href: "/holidays", label: "Holidays", icon: Umbrella },
     { href: "/bus", label: "Bus", icon: Bus },
     { href: "/visa-solution", label: "Visa", icon: FileText },
+    { href: "/wedding-events", label: "Wedding Events", icon: Heart },
   ]
 
   const moreLinks = [
