@@ -17,7 +17,7 @@ export function Header() {
     { href: "/holidays", label: "Holidays", icon: Umbrella },
     { href: "/bus", label: "Bus", icon: Bus },
     { href: "/visa-solution", label: "Visa", icon: FileText },
-    { href: "/wedding-events", label: "Wedding Events", icon: Heart },
+    { href: "/wedding-events", label: "Wedding", icon: Heart },
   ]
 
   const moreLinks = [

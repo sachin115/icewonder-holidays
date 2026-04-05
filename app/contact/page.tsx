@@ -2,6 +2,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { ContactForm } from "@/components/contact-form"
 import { ContactInfo } from "@/components/contact-info"
+import { Facebook, Instagram } from "lucide-react"
 
 export default function ContactPage() {
   return (
@@ -43,6 +44,35 @@ export default function ContactPage() {
                 referrerPolicy="no-referrer-when-downgrade"
                 title="Office Location"
               />
+            </div>
+          </div>
+        </section>
+
+        {/* Social Media Section */}
+        <section className="py-8 bg-gray-100">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-2xl font-bold mb-4">Follow Us</h2>
+            <div className="flex justify-center space-x-6">
+              <a
+                href="https://www.facebook.com/icewonderholidays#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary hover:text-primary-dark"
+              >
+                <Facebook
+                  className="w-10 h-10 inline-block"
+                />
+              </a>
+              <a
+                href="https://www.instagram.com/icewonderholidays/?hl=ar"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary hover:text-primary-dark"
+              >
+                <Instagram
+                  className="w-10 h-10 inline-block"
+                />
+              </a>
             </div>
           </div>
         </section>

@@ -1,6 +1,5 @@
 import { Header } from "@/components/header"
 import { HeroCarousel } from "@/components/hero-carousel"
-import { SpinWheel } from "@/components/spin-wheel"
 import { FlashDeals } from "@/components/flash-deals"
 import { TripPlanner } from "@/components/trip-planner"
 import { PopularPackages } from "@/components/popular-packages"
@@ -19,7 +18,6 @@ export default function Home() {
       <Header />
       <main>
         <HeroCarousel />
-        <SpinWheel />
         <FlashDeals />
         <TripPlanner />
         <PopularPackages />
